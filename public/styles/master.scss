@@ -1,0 +1,136 @@
+
+/* Sass $variable Declarations
+ * -------------------------- */
+$theme-primary: #4F98C9;
+$theme-primary-op: rgba(79, 152, 201, 0.8);
+$theme-white: #FFF;
+$theme-black: #000;
+$content-primary: #626262;
+$content-light: #C0C0C0;
+$content-dark: #202020;
+$content-error: #C67878;
+$font-chain: Trebuchet MS, Open Sans, sans-serif;
+$svg-bckg: #E9E9E9;
+$linkedIn-blue: #0A82BE;
+$PUBLIC_BASE: 'http://www.daviepoplarcapital.com/public/';
+$CLOUDINARY_BASE: 'https://res.cloudinary.com/http-isenrich-io/image/upload/';
+$Bckg-img: 'Davie%20Poplar%20Capital/Site_bg-min.jpg';
+$FA: '../../node_modules/font-awesome/scss';
+
+
+/* Sass @mixin Declarations
+ * -------------------------- */
+@mixin flex($flex: flex, $flexDir: row, $justification: space-around, $flexAlign: center) {
+  display: $flex;
+  flex-flow: $flexDir nowrap;
+  justify-content: $justification;
+  align-items: $flexAlign;
+};
+@mixin cbCSSTransformation($transform: transform, $transformProps...) {
+  -webkit-#{$transform}: $transformProps;
+     -moz-#{$transform}: $transformProps;
+      -ms-#{$transform}: $transformProps;
+       -o-#{$transform}: $transformProps;
+          #{$transform}: $transformProps;
+};
+@mixin fade($duration: 0.135s, $delay: 0s, $easingFunc: cubic-bezier(0.0, 0.0, 0.2, 1), $properties: all) {
+  $shorthand: '';
+  $timing-func: '#{$duration} #{$delay} #{$easingFunc}';
+
+  @each $property in $properties {
+    @if index($properties, $property) < length($properties) {
+      $shorthand: '#{$shorthand} #{$property} #{$timing-func}, ';
+    } @else {
+      $shorthand: '#{$shorthand} #{$property} #{$timing-func}';
+    }
+  }
+  -webkit-transition: unquote($shorthand);
+     -moz-transition: unquote($shorthand);
+      -ms-transition: unquote($shorthand);
+       -o-transition: unquote($shorthand);
+          transition: unquote($shorthand);
+};
+@mixin svg($str: none, $strWidth: 7.5, $strOp: 1, $fill: $theme-white, $fillOp: 1, $fillRule: nonzero) {
+  fill: $fill;
+  fill-rule: nonzero;
+  fill-opacity: $fillOp;
+  stroke: $str;
+  stroke-width: $strWidth;
+  stroke-opacity: $strOp;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  opacity: 1;
+};
+@mixin fontStyle($weight: normal, $size: 1rem, $height: 1, $color: inherit, $face...) {
+  @if (length($face) == 0) { $face: $font-chain; }
+  font: unquote('#{$weight} #{$size}/#{$height} #{$face}');
+  color: $color;
+};
+@mixin mobileMedia($medium: screen, $imgWidth: 6000) {
+  $pos: top left;
+  @if $medium == mobile { $pos: center; }
+  background: $content-dark url('#{$CLOUDINARY_BASE}w_#{$imgWidth}/#{$Bckg-img}') no-repeat $pos / cover;
+};
+@mixin mobileMap($medium: screen) {
+  $height: 30vh;
+  @if $medium != screen { $height: 20vh; }
+  width: 100%;
+  height: $height;
+  max-height: 275px;
+};
+
+
+/* Sass %placeholder Declarations
+ * -------------------------- */
+%invert {
+  color: $theme-white !important;
+  background-color: $theme-primary !important;
+};
+%invertHover {
+  color: $theme-primary !important;
+  background-color: $theme-white !important;
+};
+%hidden {
+  opacity: 0;
+  visibility: hidden;
+};
+%visible {
+  opacity: 1;
+  visibility: visible;
+};
+%boxShadow {
+  -webkit-box-shadow: 1px 1px 5px 0.5px #808080;
+     -moz-box-shadow: 1px 1px 5px 0.5px #808080;
+          box-shadow: 1px 1px 5px 0.5px #808080;
+};
+%boxShadowHover {
+  -webkit-box-shadow: 0 8px 13px 0.5px #B3B3B3,
+                      -4px -2px 14px 2px #B3B3B3;
+     -moz-box-shadow: 0 8px 13px 0.5px #B3B3B3,
+                      -4px -2px 14px 2px #B3B3B3;
+          box-shadow: 0 8px 13px 0.5px #B3B3B3,
+                      -4px -2px 14px 2px #B3B3B3;
+};
+%no-select {
+  -ms-pointer-events: visiblePainted;
+      pointer-events: visiblePainted;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+};
+
+
+/* Import Sass _Partials
+ * -------------------------- */
+@import './partials/global';      // Styles for base-level HTML tags sans any selectors
+@import './partials/main';        // Custom styles for classes
+@import './partials/svg';         // Styles for inline-rendered SVG elements
+@import './partials/keyframes';   // Styles for CSS animations based on keyframes CSS at-rule
+@import './partials/mobile';      // Styles for CSS mobile media queries

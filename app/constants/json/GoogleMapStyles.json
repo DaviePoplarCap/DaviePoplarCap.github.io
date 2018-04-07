@@ -1,0 +1,38 @@
+[
+  {
+    "stylers": [
+      { "hue": "#4F98C9" },
+      { "saturation": 30 }
+    ]
+  }, {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#A5A5A5" },
+      { "stroke": "#000" },
+      { "visibility": "on" }
+    ]
+  }, {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      { "weight": 0.1 },
+      { "visibility": "on" }
+    ]
+  }, {
+    "featureType": "water",
+    "elementType": "all",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#787878" }  
+    ]
+  }, {
+    "featureType": "administrative.country",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#FFF" },
+      { "weight": 1 }
+    ]
+  }
+]

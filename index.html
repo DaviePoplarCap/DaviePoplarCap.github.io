@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="https://www.w3.org/1999/xhtml/vocab">
+	<title>Davie Poplar Capital</title>
+
+	<!-- Site Meta-Data -->
+	<meta charset="UTF-8" />	<!-- HTML5 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- HTML4- -->
+	<meta name="application-name"   content="Davie Poplar Capital, LLC." />
+	<meta name="author"             content="Oliver Isenrich" />
+	<meta name="creator"            content="Oliver Isenrich" />
+	<meta name="publisher"          content="Oliver Isenrich" />
+	<meta name="generator"          content="Sublime Text 3" />
+	<meta name="Resource-type"      content="Document" />
+	<meta name="viewport"           content="width=device-width, initial-scale=1" />
+	<meta
+	  name="description"
+	  content="Corporate site of Davie Poplar Capital, LLC. - A Raleigh-based private equity firm headed by Ralph Isenrich" />
+	<meta
+	  name="keywords"
+	  content="Davie Poplar Capital (DPC), Ralph Isenrich, Oliver Isenrich, Private Equity" />
+
+	<!-- Font Awesome CDN Import (CloudFlare) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+	<!-- Browser tab icon -->	
+	<link href="public/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon" />
+
+	<!-- Styled for scripting-disabled browsers -->
+	<style>
+		/* Base non-compiled HTML font-size => 16px */
+		noscript {
+			display: block;
+		  width: 85vw;
+		  margin: 10vw auto;
+		  color: #C67878;
+		  font: normal 1.25rem/1 'Trebuchet MS', sans-serif;
+		}
+		noscript ol { list-style-type: none; }
+		noscript ol > li { padding-left: 2.857143rem; }
+	  noscript ol > li:before {
+	    content: attr(data-num) '\002E \0029 \0020';  /* => "1.) " */
+	    margin-left: -3rem;
+	    font-family: monospace, sans-serif;
+	  }
+	</style>
+</head>
+<body>
+	<noscript>
+	  This website has been built with the intention of being used in JavaScript-enabled browsing contexts. If you're seeing this, your browser may not be a JavaScript-capable browser or may have JavaScript disabled. For an optimal viewing experience, try these fixes:
+	  <ol>
+	    <li data-num="1">Ensure you have not disabled script execution in your browser's settings or, barring the first fix,</li>
+	    <li data-num="2">Reload this page in a different browser.</li>
+	  </ol>
+	  Almost any modern browser in wide circulation today (e.g., Chrome, Firefox, Safari) should serve these purposes, but Chrome is the recommended choice.
+	</noscript>
+	<!-- Root injection target for React.js -->
+	<div id="root"></div>
+
+	<!-- Google Maps JavaScript API, v3 Script Tag -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFeObw6Z_YFS5KMvGa08I8n0RASI4kNSY" async defer></script>
+
+	<!-- Webpack Bundle -->
+	<script src="public/dist/bundle.js" type="application/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "sector": "Financial",
+    "parameters": [
+      "Revenues up to $20mm",
+      "EBITDA $500K – 3mm",
+      "EBITDA Margins 5%+"
+    ]
+  }, {
+    "sector": "Business",
+    "parameters": [
+      "Recurring Revenues",
+      "CAPEX Light",
+      "Strong Middle Management"
+    ]
+  }, {
+    "sector": "Industry",
+    "parameters": [
+      "Healthcare Services",
+      "Education",
+      "Media",
+      "Business Services",
+      "Light Manufacturing & Distribution"
+    ]
+  }
+]

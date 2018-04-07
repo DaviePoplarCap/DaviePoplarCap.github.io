@@ -1,0 +1,68 @@
+
+/* Mobile Styles
+ * -------------------------- */
+@media only screen
+and (max-device-width: 700px) {
+  html { font-size: 10px; }
+  body {
+    @include mobileMedia(mobile, 2500);
+    height: auto;
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+  .center-cont.about,
+  .center-cont.focus,
+  .contact .center-cont { width: 80vw; }
+  #transition-wrapper.focus,
+  #transition-wrapper.contact {
+    position: relative;
+    height: auto;
+    min-height: 93vh;
+    margin-top: 10vh;
+    align-items: flex-start;
+  }
+  .focus .info,
+  .contact .wrapper {
+    @include flex(flex, column, space-around, flex-start);
+    background-color: transparent;
+  }
+  .contact .wrapper {
+    > div:first-child { border: none; }
+    .primary-btn { width: 85%; }
+  }
+  .third,
+  .contact .flex-contact {
+    width: 100% !important;
+    height: auto;
+    margin: 1rem auto;
+    background-color: $theme-white;
+  }
+
+  footer {
+    position: relative;
+    overflow: hidden;
+    > div:first-child {
+      width: 85% !important;
+      p {
+        &.computer { display: none; }
+        &.mobile { display: block !important; }
+      }
+    }
+    .social-share {
+      position: relative !important;
+      max-width: 15vw !important;
+      > a { width: 3.5vh !important; }
+    }
+  }
+  .DPC-logo {
+    width: 90vw;
+    max-width: 380px;
+    height: 15rem;
+    text[data-section=logo-head] { font: 700 12rem/12 Georgia, sans-serif; }
+    text[data-section=logo-sub] { font: lighter 3.5rem/3.5 Georgia, sans-serif; }
+  }
+  #maps-container {
+    @include mobileMap(mobile);
+    margin: 0 0 5vh 0;
+  }
+}

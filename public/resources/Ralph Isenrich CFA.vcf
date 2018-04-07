@@ -1,0 +1,19 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Isenrich;Ralph;;;CFA
+FN:Ralph Isenrich CFA
+ORG:Davie Poplar Capital
+TITLE:Principal
+TEL;CELL;VOICE:(919) 334-8367
+ADR;WORK;PREF;ENCODING=QUOTED-PRINTABLE:;;185 Windchime Ct.=0D=0A=
+Suite 201;Raleigh;NC;27615;United States of America
+LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE:185 Windchime Ct.=0D=0A=
+Suite 201=0D=0A=
+Raleigh NC 27615=0D=0A=
+United States of America
+X-MS-OL-DEFAULT-POSTAL-ADDRESS:2
+URL;WORK:http://www.daviepoplarcapital.com
+EMAIL;PREF;INTERNET:ralph@daviepoplarcapital.com
+X-MS-OL-DESIGN;CHARSET=utf-8:<card xmlns="http://schemas.microsoft.com/office/outlook/12/electronicbusinesscards" ver="1.0" layout="left" bgcolor="ffffff"><img xmlns="" align="fit" area="16" use="cardpicture"/><fld xmlns="" prop="name" align="left" dir="ltr" style="b" color="000000" size="10"/><fld xmlns="" prop="org" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="title" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="telcell" align="left" dir="ltr" color="d48d2a" size="8"><label align="right" color="626262">Mobile</label></fld><fld xmlns="" prop="email" align="left" dir="ltr" color="d48d2a" size="8"/><fld xmlns="" prop="addrwork" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="webwork" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/></card>
+REV:20160403T122621Z
+END:VCARD

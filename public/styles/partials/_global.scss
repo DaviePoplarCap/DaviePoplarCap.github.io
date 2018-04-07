@@ -1,0 +1,71 @@
+
+/* Styles
+ * -------------------------- */
+ 
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-locale: 'en';
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+body {
+  @include mobileMedia();
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+main {
+  @include flex(flex, row, center);
+  width: 100vw;
+  min-height: 93vh;
+  bottom: 7vh;
+}
+
+ul {
+  position: relative;
+  list-style: disc outside none;
+  word-wrap: break-word;
+}
+li {
+  @include fontStyle(normal, 1rem, 1.714286, $content-primary);
+  margin: 0.714286rem 0;
+}
+
+h4 {
+  color: $theme-primary;
+  font-weight: bold;
+}
+h3 {
+  @include fontStyle(normal, 1.571429rem, 1.571429rem, $theme-white);
+  margin: 0;
+  padding: 2.5rem 0;
+  text-align: center;
+  background-color: $theme-primary-op;
+}
+
+a,
+a:visited,
+a:focus,
+a:active { text-decoration: none; }
+
+footer {
+  position: absolute;
+  width: 100vw;
+  height: 7vh;
+  left: 0;
+  bottom: 0;
+  background-color: $content-dark;
+  overflow: hidden;
+  z-index: 20;
+}

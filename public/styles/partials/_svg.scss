@@ -1,0 +1,61 @@
+
+/* Inline SVG Styles
+ * -------------------------- */
+
+// DPC Logo:
+.DPC-logo {
+  @include cbCSSTransformation(transition, all 0.3s ease-in-out);
+  @extend %no-select;
+  width: 570px;
+  height: 275px;
+  background-color: $theme-primary-op;
+  letter-spacing: 0.214286rem;
+
+  text {
+    text-anchor: middle;
+    text-align: center;
+    fill: $theme-white;
+
+    &[data-section='logo-head'] { @include fontStyle(bold, 7.142857rem, 7.857143rem, inherit, Georgia, sans-serif); }
+    &[data-section='logo-sub'] {
+      @include fontStyle(lighter, 2.5rem, 2.5rem, inherit, Georgia, sans-serif);
+      font-variant: small-caps;
+      stroke: none;
+    }
+  }
+  line { @include svg($theme-white, 1); }
+  &:hover {
+    @include cbCSSTransformation(transform, scale(1.035));
+    -webkit-box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
+       -moz-box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+// LinkedIn Logo:
+.linkedIn-logo path {
+  @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
+  fill: $theme-primary;
+}
+
+// Email Glyph Icon:
+.email-glyph {
+  .glyph-main {
+    @include cbCSSTransformation(transform, translate(-124.9887px, -685.13414px));
+    > g { @include cbCSSTransformation(transform, matrix(1.0042942, 0, 0, 1.0049899, -1269.9646, 728.76886)); }
+  }
+  .g1 path {
+    &:first-child {
+      @include cbCSSTransformation(transition, fill 0.3s ease-in-out);
+      @include svg(none, 7.5, 1, $theme-primary);
+    }
+    &:last-child { @include svg(none, 7.5, 1, $theme-black, 0.16161619); }
+  }
+  .g2 path {
+    &:first-child {
+      @include cbCSSTransformation(transform, matrix(1.9621585, 0, 0, 1.9999006, 1430.5884, -501.93632));
+      @include svg(none, 2, 0.7676768, $svg-bckg);
+    }
+    &:last-child { @include svg(#979797, 7.5, 1, $theme-white, 1, evenodd); }
+  }
+}

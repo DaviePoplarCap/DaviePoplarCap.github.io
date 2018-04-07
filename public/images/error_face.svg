@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="518px" viewBox="0 0 400 518" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Error Face 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polyline id="path-1" points="400 99.5 400 517.647059 0 517.647059 0 0 300.5 0"></polyline>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="400" height="517.647059" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-560.000000, -39.000000)">
+            <g id="Error-Face-2" transform="translate(560.000000, 39.000000)">
+                <g id="Frame">
+                    <rect id="Diagonal-Block" fill="#979797" x="300.5" y="50" width="50" height="50"></rect>
+                    <use id="Outline" stroke="#979797" mask="url(#mask-2)" stroke-width="100" xlink:href="#path-1"></use>
+                </g>
+                <g id="Facial-Features" transform="translate(75.000000, 149.000000)" fill="#979797">
+                    <path d="M176,0 L226,0 L226,100 L176,100 L176,0 Z M25,0 L75,0 L75,100 L25,100 L25,0 Z" id="Eyes"></path>
+                    <path d="M50,195 L200,195 L200,245 L50,245 L50,195 Z M200,245 L250,245 L250,295 L200,295 L200,245 Z M0,245 L50,245 L50,295 L0,295 L0,245 Z" id="Mouth"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

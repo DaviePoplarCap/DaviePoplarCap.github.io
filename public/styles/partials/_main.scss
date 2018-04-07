@@ -1,0 +1,220 @@
+
+// General heritable class styles:
+.half { width: 50%; }
+.third {
+  width: 32.5%;
+  text-align: left;
+}
+.primary-btn {
+  @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out);
+  @include fontStyle(normal, 1rem, 1.428571rem, $theme-white);
+  @extend %invert;
+  @extend %boxShadow;
+  display: block;
+  width: 70%;
+  margin: 1rem auto;
+  padding: 0.892857rem 0;
+  text-align: center;
+  white-space: nowrap;
+  > i { @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out); }
+  &:hover {
+    @extend %invertHover;
+    @extend %boxShadowHover;
+    i { color: $theme-primary; }
+  }
+}
+
+// Navigation Sidebar Styles:
+#nav-bar {
+  @extend %no-select;
+  * { @extend %no-select; }
+  position: absolute;
+  top: 0;
+  #nav-links-wrapper {
+    @include fontStyle(300, 2rem, 1.428571rem, inherit, 'Open Sans', sans-serif);
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    background: $theme-primary-op;
+    overflow: hidden;
+    z-index: 8;
+    &.active { @include cbCSSTransformation(animation, sideExpand 0.35s ease-in 1 normal forwards); }
+    &.inactive { @include cbCSSTransformation(animation, sideCollapse 0.35s cubic-bezier(0.1, 0.1, 0.5, 0.1) 1 normal forwards); }
+  }
+  #hamburger-icon {
+    @include cbCSSTransformation(transition, all 0.35s 0.35s ease-out);
+    @include fontStyle(normal, 3.5rem, 1, $theme-primary);
+    position: fixed;
+    margin: 2% 0 0 1%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  #nav-links {
+    position: relative;
+    top: 17.5%;
+    > a {
+      @include cbCSSTransformation(transition, all 0.35s 0.1s ease-out);
+      display: block;
+      width: 100%;
+      padding: 1.785714rem;
+      color: $theme-white;
+      white-space: nowrap;
+      &:hover {
+        width: 110%;
+        text-indent: 10%;
+        background-color: $theme-white;
+        color: $theme-primary;
+      }
+    }
+  }
+}
+
+// Main Content Styles:
+.home .center-cont { width: auto; }
+.about {
+  .info { padding-bottom: 5%; }
+  p {
+    @include fontStyle(normal, 1rem, 1.714286, $content-primary);
+    width: 85%;
+    margin: auto;
+    padding-top: 5%;
+    text-align: justify;
+  }
+}
+
+.focus {
+  .sector {
+    @include fontStyle(normal, 1.428571rem, 1.428571, $theme-white, 'Trebuchet MS', 'Wire One', sans-serif)
+    @extend %boxShadow;
+    width: 90%;
+    text-align: center;
+    padding: 1.071429rem 0;
+    margin: 1.428571rem auto;
+    background-color: $theme-primary;
+  }
+  .info { @include flex(flex, row, space-around, flex-start); }
+}
+
+.contact {
+  .wrapper {
+    @include flex(flex, row, space-around, flex-start);
+    p {
+      @include fontStyle(normal, 1.15rem, 1.2, $content-primary);
+      margin: 0.25rem 0;
+    }
+  }
+  .info { padding: 1rem 0 0; }
+  &.flexbox-col,
+  .info { @include flex(flex, column, center, flex-start); }
+  .flex-contact {
+    @include flex(inline-flex, column);
+    position: relative;
+    margin: 1rem 0;
+    &:first-child { border-right: 1px solid $content-light; }
+  }
+}
+
+.error-wrapper {
+  @include flex(flex, row, space-around, flex-start);
+  height: 30vh;
+  max-height: 300px;
+  padding: 2rem;
+  > div {
+    width: 60%;
+    h3 {
+      padding-bottom: 0;
+      color: $content-error;
+      background-color: transparent;
+    }
+    p { @include fontStyle(normal, 1.25rem, 1, $content-primary); }
+    a {
+      color: $theme-primary;
+      &:hover { color: $linkedIn-blue; }
+    }
+  }
+  img { width: 25%; }
+}
+
+.about .info,
+.focus .info,
+.contact .wrapper,
+.error-wrapper { background-color: $theme-white; }
+.center-cont,
+.error-wrapper,
+#maps-container { width: 675px; }
+
+.footer {
+  @include flex(flex, row, space-between);
+  > div:first-child {
+    @include flex(inline-flex, column, center);
+    width: 100%;
+    height: inherit;
+    p {
+      @include fontStyle(normal, 1rem, 1, $content-primary);
+      margin: 0;
+      &.mobile { display: none; }
+    }
+  }
+  .social-share {
+    @include flex(inline-flex, row);
+    @extend %no-select;
+    position: absolute;
+    width: 15%;
+    max-width: 10vw;
+    height: 100%;
+    right: 0;
+    top: 0;
+    > a {
+      width: calc(7vh * 0.6);
+      &:hover .frame { fill: $linkedIn-blue; }
+    }
+  }
+}
+
+// Google Maps JavaScript API Styles:
+#maps-container {
+  @include mobileMap();
+  margin-top: 5vh;
+  .info-window {
+    h4 { display: inline; }
+    p {
+      @include fontStyle(normal, 0.7rem, 1.5, $content-primary, 'Open Sans', sans-serif);
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+// Font Awesome (`.fa`) Styles:
+.fa {
+  @include fontStyle(500, 1.15rem, 1.2, $theme-primary, 'FontAwesome' !important);
+  display: inline !important;
+  margin-right: 0.75rem;
+  &.invert { color: $theme-white; }
+}
+
+// ReactCSSTransitionGroup Animation Styles:
+.router-transition-group {
+  &-enter {
+    @include cbCSSTransformation(transition, all 0.750s cubic-bezier(0.175, 0.665, 0.320, 1));
+    @include cbCSSTransformation(transform, translate(100%, 0));
+    @include cbCSSTransformation(transform, translate3d(100%, 0, 0));
+    opacity: 0;
+    &.router-transition-group-enter-active {
+      @include cbCSSTransformation(transform, translate(100%, 0));
+      @include cbCSSTransformation(transform, translate3d(100%, 0, 0));
+      opacity: 0;
+    }
+  }
+  &-leave {
+    @include cbCSSTransformation(transition, all 0.750s cubic-bezier(0.175, 0.665, 0.320, 1));
+    @include cbCSSTransformation(transform, translate(0, 0));
+    @include cbCSSTransformation(transform, translate3d(0, 0, 0));
+    opacity: 0;
+    &.router-transition-group-leave-active {
+      @include cbCSSTransformation(transform, translate(100%, 0));
+      @include cbCSSTransformation(transform, translate3d(100%, 0, 0));
+      @extend %hidden;
+    }
+  }
+}

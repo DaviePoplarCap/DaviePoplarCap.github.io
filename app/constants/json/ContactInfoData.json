@@ -1,0 +1,18 @@
+[
+  {
+    "type": "name",
+    "value": "Ralph Isenrich, CFA",
+    "tooltip": "Ralph Isenrich, Chartered Financial Analyst (CFA)",
+    "scheme": null
+  }, {
+    "type": "email",
+    "value": "ralph@daviepoplarcapital.com",
+    "tooltip": "Send inmail to Ralph",
+    "scheme": "mailto:ralph@daviepoplarcapital.com"
+  }, {
+    "type": "phone",
+    "value": "(919) 334-8367",
+    "tooltip": "Call Ralph on his direct line",
+    "scheme": "tel:19193348367"
+  }
+]

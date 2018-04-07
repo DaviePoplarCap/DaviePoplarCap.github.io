@@ -1,0 +1,14 @@
+[
+  {
+    "type": "personal",
+    "target": "_self",
+    "icon": "address-card",
+    "text": "Download vCard",
+    "downloadable": true
+  }, {
+    "type": "corporate",
+    "target": "_blank",
+    "icon": "newspaper-o",
+    "text": "Subscribe for News & Updates"
+  }
+]
